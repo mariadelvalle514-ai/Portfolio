@@ -19,6 +19,8 @@
 
   /* ===== Ajustes responsive agregados por Claude ===== */
   @media (max-width: 900px) {
+
+    /* --- 1. Todas las grillas de 2+ columnas pasan a 1 columna --- */
     [style*="grid-template-columns:0.42fr 0.58fr"],
     [style*="grid-template-columns:0.32fr 0.68fr"],
     [style*="grid-template-columns:0.34fr 0.66fr"],
@@ -30,6 +32,8 @@
     [style*="grid-template-columns:repeat(4,1fr)"],
     [style*="grid-template-columns:repeat(12,1fr)"] {
       grid-template-columns: 1fr !important;
+      min-height: auto !important;
+      row-gap: 28px !important;
     }
 
     [style*="grid-column:1 / span 4"],
@@ -37,38 +41,89 @@
     [style*="grid-column:9 / span 4"] {
       grid-column: 1 / -1 !important;
       margin-top: 0 !important;
-    }
-
-    [style*="position:sticky"] {
       position: static !important;
     }
 
-    [style*="width: 958px"] {
-      width: 100% !important;
-      height: auto !important;
+    [style*="position:sticky"] { position: static !important; }
+
+    /* --- 2. Nada de pantalla completa forzada: cada bloque mide lo que necesita --- */
+    #sobre, #oficina, #petrona {
+      min-height: auto !important;
     }
 
+    /* --- 3. Imagen arriba, texto en párrafo abajo (Oficina, Petrona, Juanita) --- */
+    [style*="position:relative;max-width:1680px"] > div:first-child,
+    [style*="max-width:1620px;margin:0 auto;width:100%"] > div:first-child,
+    [style*="grid-template-columns:0.5fr 0.5fr"] > div:first-child {
+      order: 2 !important;
+    }
+    [style*="position:relative;max-width:1680px"] > div:last-child,
+    [style*="max-width:1620px;margin:0 auto;width:100%"] > div:last-child,
+    [style*="grid-template-columns:0.5fr 0.5fr"] > div:last-child {
+      order: 1 !important;
+      margin-bottom: 28px;
+    }
+
+    /* Franja de foto de portada (retrato) con alto fijo, no pantalla completa */
+    #sobre [data-reveal="right"] {
+      height: 48vh !important;
+      min-height: 320px !important;
+    }
+    #petrona [style*="height:min(74vh,660px)"] {
+      height: 52vh !important;
+    }
+
+    /* --- 4. Tipografías a tamaño de lectura normal en vez de gigantes --- */
+    h2[style*="font-size: 77px"] { font-size: 34px !important; line-height: 1.18 !important; }
+    h3[style*="font-size: clamp(30px,3.6vw,60px)"],
+    h3[style*="font-size:clamp(30px,3.4vw,58px)"] { font-size: 30px !important; line-height: 1.15 !important; }
+    div[style*="font-size:clamp(14px,1.05vw,17px)"] { font-size: 15.5px !important; line-height: 1.7 !important; }
+    p[style*="line-height: 2.05"] { line-height: 1.6 !important; font-size: 15px !important; }
+    p[style*="line-height:2.05"] { line-height: 1.6 !important; }
+    [style*="font-size: 143px"] { font-size: clamp(48px, 17vw, 143px) !important; }
+    p[style*="font-size: clamp(22px,2.5vw,40px)"] { font-size: 24px !important; }
+
+    /* --- 5. Espaciado e imágenes que no se rompan --- */
+    section { padding-left: 22px !important; padding-right: 22px !important; }
+    section[style*="padding:min(20vh"] { padding-top: 64px !important; padding-bottom: 64px !important; }
+    [style*="width: 958px"] { width: 100% !important; height: auto !important; }
     [style*="justify-content:center;gap:clamp(20px,3vw,54px)"],
-    [style*="justify-content:flex-end;gap:clamp"] {
-      flex-wrap: wrap !important;
-      row-gap: 24px !important;
-    }
-
-    [style*="font-size: 143px"] {
-      font-size: clamp(48px, 17vw, 143px) !important;
-    }
-
-    [style*="max-width:660px"],
-    [style*="height:min(74vh,660px)"] {
-      max-width: 92vw !important;
-    }
-
-    section {
-      padding-left: 22px !important;
-      padding-right: 22px !important;
-    }
-
+    [style*="justify-content:flex-end;gap:clamp"] { flex-wrap: wrap !important; row-gap: 24px !important; }
+    [style*="max-width:660px"] { max-width: 92vw !important; }
     img { max-width: 100%; }
+
+    /* --- 6. Índice: esto era lo que desbordaba el ancho y corría todo hacia un costado --- */
+    #indice a[style*="justify-content:space-between"] {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 3px !important;
+      padding: 11px 0 !important;
+      font-size: 22px !important;
+      white-space: normal !important;
+    }
+    #indice a span { font-size: 9px !important; }
+    #indice { padding-top: 60px !important; padding-bottom: 60px !important; }
+
+    /* --- 7. Hero "PORTFOLIO": un poco más chico, con margen de sobra para no desbordar --- */
+    [style*="font-size: 143px"] { font-size: clamp(40px, 13vw, 90px) !important; }
+
+    /* --- 8. Foto de portada más chica, y nombre más chico debajo --- */
+    #sobre [data-reveal="right"] {
+      height: 30vh !important;
+      min-height: 220px !important;
+    }
+    h2[style*="font-size: 77px"] { font-size: 27px !important; }
+
+    /* --- 9. Scroll por pantallas: cada sección se acomoda al tope al bajar --- */
+    html { scroll-snap-type: y proximity; }
+    section { scroll-snap-align: start; }
+
+    /* --- 10. Email de contacto: una sola línea, más chico --- */
+    a[style*="font-size: 28px"] {
+      font-size: 15px !important;
+      white-space: nowrap !important;
+      word-break: keep-all !important;
+    }
   }
 </style>
 </head>
