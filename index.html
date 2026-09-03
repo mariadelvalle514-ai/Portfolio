@@ -146,6 +146,38 @@
       white-space: nowrap !important;
       word-break: keep-all !important;
     }
+
+    /* --- 11. Doña Petrona: la "pantalla de celular" pasa a ser un post cuadrado de Instagram --- */
+    [style*="position:relative;height:min(74vh,660px);aspect-ratio:9 / 19.5"] {
+      height: auto !important;
+      aspect-ratio: 1 / 1 !important;
+      width: 100% !important;
+      max-width: 340px !important;
+      margin: 0 auto 22px !important;
+      border-radius: 14px !important;
+      background: #fff !important;
+      padding: 7px !important;
+      box-shadow: 0 10px 26px rgba(26,24,20,0.16) !important;
+    }
+    [style*="position:relative;height:min(74vh,660px);aspect-ratio:9 / 19.5"] > div {
+      border-radius: 8px !important;
+    }
+    [style*="linear-gradient(180deg,#57503f,#241f19)"],
+    [style*="width:30%;height:2%;min-height:9px"] {
+      display: none !important;
+    }
+
+    /* La grilla de 4 fotos: se mantiene en 2 columnas (no colapsa a 1) y llena bien cada cuadro */
+    [style*="grid-template-columns:1fr 1fr;grid-auto-rows:1fr"] {
+      grid-template-columns: 1fr 1fr !important;
+      height: auto !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    [style*="grid-template-columns:1fr 1fr;grid-auto-rows:1fr"] img {
+      aspect-ratio: 1 / 1 !important;
+      object-fit: cover !important;
+    }
   }
 </style>
 </head>
