@@ -46,17 +46,14 @@
     }
 
     /* --- 2. Branding (Piero / Brioche): título+párrafo arriba, 2 fotos abajo lado a lado --- */
-    [style*="grid-template-columns:repeat(12,1fr)"],
-    [style*="grid-template-columns: repeat(12,1fr)"],
-    [style*="grid-template-columns: repeat(12, 1fr)"] {
+    .mdv-branding-grid {
       grid-template-columns: 1fr 1fr !important;
       grid-auto-columns: 1fr !important;
       min-height: auto !important;
       row-gap: 20px !important;
       column-gap: 14px !important;
     }
-    [style*="grid-column:1 / span 4"],
-    [style*="grid-column: 1 / span 4"] {
+    .mdv-piero-text {
       grid-column: 1 / -1 !important;
       width: 100% !important;
       min-width: 0 !important;
@@ -64,32 +61,26 @@
       position: static !important;
       order: 1 !important;
     }
-    [style*="grid-column:5 / span 4"],
-    [style*="grid-column: 5 / span 4"] {
+    .mdv-piero-img {
       grid-column: span 1 !important;
       width: 100% !important;
       min-width: 0 !important;
       order: 2 !important;
     }
-    [style*="grid-column:9 / span 4;display:flex;flex-direction:column;gap:clamp(18px,2.2vw,32px)"],
-    [style*="grid-column: 9 / span 4; display: flex; flex-direction: column; gap: clamp(18px,2.2vw,32px)"],
-    [style*="grid-column: 9 / span 4; display: flex; flex-direction: column; gap: clamp(18px, 2.2vw, 32px)"] {
+    .mdv-piero-tag {
       grid-column: span 1 !important;
       width: 100% !important;
       min-width: 0 !important;
       order: 2 !important;
       margin-top: 0 !important;
     }
-    [style*="grid-column:1 / span 7"],
-    [style*="grid-column: 1 / span 7"] {
+    .mdv-brioche-img {
       grid-column: 1 / -1 !important;
       width: 100% !important;
       min-width: 0 !important;
       order: 2 !important;
     }
-    [style*="grid-column:9 / span 4;display:flex;flex-direction:column;gap:clamp(22px,3vh,34px)"],
-    [style*="grid-column: 9 / span 4; display: flex; flex-direction: column; gap: clamp(22px,3vh,34px)"],
-    [style*="grid-column: 9 / span 4; display: flex; flex-direction: column; gap: clamp(22px, 3vh, 34px)"] {
+    .mdv-brioche-text {
       grid-column: 1 / -1 !important;
       width: 100% !important;
       min-width: 0 !important;
@@ -237,9 +228,7 @@
     }
 
     /* --- 11. Doña Petrona: la "pantalla de celular" pasa a ser un post cuadrado de Instagram --- */
-    [style*="position:relative;height:min(74vh,660px);aspect-ratio:9 / 19.5"],
-    [style*="position: relative; height: min(74vh,660px); aspect-ratio: 9 / 19.5"],
-    [style*="position: relative; height: min(74vh, 660px); aspect-ratio: 9 / 19.5"] {
+    .mdv-petrona-phone {
       height: auto !important;
       aspect-ratio: 1 / 1 !important;
       width: 100% !important;
@@ -250,9 +239,7 @@
       padding: 7px !important;
       box-shadow: 0 10px 26px rgba(26,24,20,0.16) !important;
     }
-    [style*="position:relative;height:min(74vh,660px);aspect-ratio:9 / 19.5"] > div,
-    [style*="position: relative; height: min(74vh,660px); aspect-ratio: 9 / 19.5"] > div,
-    [style*="position: relative; height: min(74vh, 660px); aspect-ratio: 9 / 19.5"] > div {
+    .mdv-petrona-phone > div {
       border-radius: 8px !important;
     }
     [style*="linear-gradient(180deg,#57503f,#241f19)"],
@@ -261,15 +248,13 @@
     [style*="width: 30%; height: 2%; min-height: 9px"] {
       display: none !important;
     }
-    [style*="grid-template-columns:1fr 1fr;grid-auto-rows:1fr"],
-    [style*="grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr"] {
+    .mdv-petrona-grid {
       grid-template-columns: 1fr 1fr !important;
       height: auto !important;
       max-width: 100% !important;
       width: 100% !important;
     }
-    [style*="grid-template-columns:1fr 1fr;grid-auto-rows:1fr"] img,
-    [style*="grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr"] img {
+    .mdv-petrona-grid img {
       aspect-ratio: 1 / 1 !important;
       object-fit: cover !important;
     }
@@ -303,30 +288,26 @@
     }
 
     /* --- 14. Mockups de Fierro y La Oficina a todo el ancho de la pantalla --- */
-    [style*="radial-gradient(120% 130% at 50% 40%"] {
+    .mdv-fierro-feed {
       width: 100vw !important;
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
       gap: 4px !important;
     }
-    [style*="radial-gradient(120% 130% at 50% 40%"] > img {
+    .mdv-fierro-feed > img {
       display: none !important;
     }
-    [style*="radial-gradient(120% 130% at 50% 40%"] > div {
+    .mdv-fierro-feed > div {
       height: 90% !important;
     }
-    [style*="justify-content:flex-end;gap:clamp(10px,1.2vw,22px)"],
-    [style*="justify-content: flex-end; gap: clamp(10px,1.2vw,22px)"],
-    [style*="justify-content: flex-end; gap: clamp(10px, 1.2vw, 22px)"] {
+    .mdv-oficina-mockup {
       width: 100vw !important;
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
     }
 
     /* --- 15. Post de Doña Petrona: mismo ancho que el resto del contenido --- */
-    [style*="position:relative;height:min(74vh,660px);aspect-ratio:9 / 19.5"],
-    [style*="position: relative; height: min(74vh,660px); aspect-ratio: 9 / 19.5"],
-    [style*="position: relative; height: min(74vh, 660px); aspect-ratio: 9 / 19.5"] {
+    .mdv-petrona-phone {
       max-width: 100% !important;
       margin: 0 0 22px 0 !important;
     }
@@ -459,7 +440,7 @@
         <span data-reveal="fade">El feed como pieza completa</span>
         
       </div>
-      <div data-reveal="up" style="position:relative;aspect-ratio:16 / 9;background:radial-gradient(120% 130% at 50% 40%, #1A1714 0%, #0C0B09 68%);border:1px solid rgba(240,235,228,0.09);display:flex;align-items:center;justify-content:center;gap:clamp(6px,1.1vw,20px);overflow:hidden">
+      <div data-reveal="up" class="mdv-fierro-feed" style="position:relative;aspect-ratio:16 / 9;background:radial-gradient(120% 130% at 50% 40%, #1A1714 0%, #0C0B09 68%);border:1px solid rgba(240,235,228,0.09);display:flex;align-items:center;justify-content:center;gap:clamp(6px,1.1vw,20px);overflow:hidden">
         <img src="./FIERRO-3.PNG" alt="Pieza Fierro #10años" style="display:block;height:33%;width:auto;object-fit:contain;box-shadow:0 20px 50px rgba(0,0,0,0.6)">
         <img src="./FIERRO -1 .PNG" alt="Pieza raíz y origen" style="display:block;height:33%;width:auto;object-fit:contain;box-shadow:0 20px 50px rgba(0,0,0,0.6)">
         <div style="position:relative;height:76%;aspect-ratio:9 / 19.2;flex:0 0 auto;border-radius:clamp(16px,2.1vw,38px);background:linear-gradient(150deg,#3A3631,#15130F 42%,#0A0908);padding:clamp(4px,0.5vw,9px);box-shadow:0 40px 90px rgba(0,0,0,0.75), 0 0 0 1px rgba(240,235,228,0.1), inset 0 0 0 1px rgba(240,235,228,0.06);z-index:2">
@@ -488,7 +469,7 @@
           <span data-reveal="fade" data-delay="260">Identidad · Cartelería · Contenido</span>
           <a data-reveal="fade" data-delay="300" href="https://instagram.com/laoficinabrasa" target="_blank" rel="noopener" style="color:#F2EDE6">@laoficinabrasa</a>
         </div>
-      </div><div style="display:flex;align-items:center;justify-content:flex-end;gap:clamp(10px,1.2vw,22px);min-width:0;width:100%">
+      </div><div class="mdv-oficina-mockup" style="display:flex;align-items:center;justify-content:flex-end;gap:clamp(10px,1.2vw,22px);min-width:0;width:100%">
         <img data-reveal="up" src="./grey-modern-social-media-mockup-online-p-mteoyi3z-zbth.png" alt="Cartel de La Oficina en pantalla" style="width: 958px; min-width: 0; height: 540px; flex: 0 0 auto; object-fit: scale-down">
         
         
@@ -516,7 +497,7 @@
         </div>
       </div><div style="display:flex;flex-direction:column;gap:clamp(18px,2.4vh,30px);min-width:0">
         <div style="display:flex;align-items:center;justify-content:center;gap:clamp(20px,3vw,54px);min-width:0">
-          <div data-reveal="up" style="position:relative;height:min(74vh,660px);aspect-ratio:9 / 19.5;flex:0 0 auto;border-radius:clamp(28px,3vw,48px);background:linear-gradient(155deg,#8E877A,#3A342C 34%,#211D18 74%,#3E382F);padding:clamp(6px,0.7vw,11px);box-shadow:0 46px 90px -24px rgba(26,24,20,0.55), 0 8px 24px rgba(26,24,20,0.22), inset 0 0 0 1px rgba(255,255,255,0.22)">
+          <div data-reveal="up" class="mdv-petrona-phone" style="position:relative;height:min(74vh,660px);aspect-ratio:9 / 19.5;flex:0 0 auto;border-radius:clamp(28px,3vw,48px);background:linear-gradient(155deg,#8E877A,#3A342C 34%,#211D18 74%,#3E382F);padding:clamp(6px,0.7vw,11px);box-shadow:0 46px 90px -24px rgba(26,24,20,0.55), 0 8px 24px rgba(26,24,20,0.22), inset 0 0 0 1px rgba(255,255,255,0.22)">
             <div style="position:relative;height:100%;width:100%;border-radius:clamp(23px,2.5vw,39px);overflow:hidden;background:#0B0A08;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.6)">
               <img src="./mockup movil doña petrona -1 .png" alt="Pieza de Doña Petrona en pantalla" style="display:block;width:100%;height:100%;object-fit:cover">
               <div style="position:absolute;left:50%;top:1.5%;transform:translateX(-50%);width:30%;height:2%;min-height:9px;border-radius:99px;background:#0B0A08"></div>
@@ -526,7 +507,7 @@
             <div style="position:absolute;left:calc(-1 * clamp(2px,0.22vw,4px));top:20%;width:clamp(2px,0.22vw,4px);height:6%;border-radius:99px;background:linear-gradient(180deg,#57503f,#241f19)"></div>
             <div style="position:absolute;left:calc(-1 * clamp(2px,0.22vw,4px));top:30%;width:clamp(2px,0.22vw,4px);height:9%;border-radius:99px;background:linear-gradient(180deg,#57503f,#241f19)"></div>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:clamp(12px,1.5vw,24px);height:min(74vh,660px);min-width:0;flex:1 1 auto;max-width:660px">
+          <div class="mdv-petrona-grid" style="display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:clamp(12px,1.5vw,24px);height:min(74vh,660px);min-width:0;flex:1 1 auto;max-width:660px">
             <img data-reveal="up" data-delay="140" src="./img_9224-mten8w51-fpmv.png" alt="Pieza para Doña Petrona" style="display:block;width:100%;height:100%;min-height:0;object-fit:contain;object-position:center">
             <img data-reveal="up" data-delay="200" src="./DOÑA PETRONA -3.PNG" alt="Lo que no sabías de los ñoquis — Doña Petrona" style="display:block;width:100%;height:100%;min-height:0;object-fit:contain;object-position:center">
             <img data-reveal="up" data-delay="260" src="./DOÑA PETRONA 4.PNG" alt="Ensalada Caprese — Doña Petrona" style="display:block;width:100%;height:100%;min-height:0;object-fit:contain;object-position:center">
@@ -617,17 +598,17 @@
           <span>06.1 — Piero Ronconi</span>
           <span>Take away de pasta · Valencia</span>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(18px,2.2vw,32px);align-items:start">
-          <div style="grid-column:1 / span 4;display:flex;flex-direction:column;gap:clamp(22px,3vh,34px);position:sticky;top:clamp(40px,8vh,90px)">
+        <div class="mdv-branding-grid" style="display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(18px,2.2vw,32px);align-items:start">
+          <div class="mdv-piero-text" style="grid-column:1 / span 4;display:flex;flex-direction:column;gap:clamp(22px,3vh,34px);position:sticky;top:clamp(40px,8vh,90px)">
             <h3 data-reveal="up" style="margin:0;font-weight:200;font-size:clamp(30px,3.4vw,58px);line-height:1.02;letter-spacing:-0.01em;color:#2C1917">Piero<br>Ronconi</h3>
             <p data-reveal="up" data-delay="120" style="margin:0;font-size:15px;line-height:2.05;color:#4A3B36;max-width:40ch;text-wrap:pretty">Take away de pasta italiana en Valencia. El logotipo busca Italia sin folclore: sobriedad, elegancia y un trazo contemporáneo que funciona igual en una carta, en una caja o en un sello.</p>
             <span data-reveal="fade" data-delay="200" style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7A70">Logotipo · Aplicaciones · Papelería</span>
             <img data-reveal="up" data-delay="240" src="./captura-de-pantalla-2026-08-30-a-las-12--mtfo98dh-72u8.png" alt="Piero Ronconi" style="display:block;width:100%;max-width:230px;height:auto;mix-blend-mode:multiply">
           </div>
-          <div data-reveal="up" style="grid-column:5 / span 4;overflow:hidden;background:#DAD5CF">
+          <div data-reveal="up" class="mdv-piero-img" style="grid-column:5 / span 4;overflow:hidden;background:#DAD5CF">
             <div style="aspect-ratio:3 / 4;transition:transform 1100ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.045)"><img src="./captura-de-pantalla-2026-08-30-a-las-12--mtfo7eay-fmlj.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover"></div>
           </div>
-          <div style="grid-column:9 / span 4;display:flex;flex-direction:column;gap:clamp(18px,2.2vw,32px);margin-top:clamp(0px,6vh,90px)">
+          <div class="mdv-piero-tag" style="grid-column:9 / span 4;display:flex;flex-direction:column;gap:clamp(18px,2.2vw,32px);margin-top:clamp(0px,6vh,90px)">
             <div data-reveal="up" data-delay="140" style="overflow:hidden;background:#DAD5CF">
               <div style="aspect-ratio:4 / 3;transition:transform 1100ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.045)"><img src="./captura-de-pantalla-2026-08-30-a-las-12--mtfo7pu0-typ1.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover"></div>
             </div>
@@ -641,11 +622,11 @@
           <span>06.2 — La Petite Brioche</span>
           <span>Panadería artesanal</span>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(18px,2.2vw,32px);align-items:center">
-          <div data-reveal="up" style="grid-column:1 / span 7;overflow:hidden;background:#DAD5CF">
+        <div class="mdv-branding-grid" style="display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(18px,2.2vw,32px);align-items:center">
+          <div data-reveal="up" class="mdv-brioche-img" style="grid-column:1 / span 7;overflow:hidden;background:#DAD5CF">
             <div style="aspect-ratio:16 / 11;transition:transform 1100ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.04)"><img src="./captura-de-pantalla-2026-08-30-a-las-12--mtfo6yqh-qdv6.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover"></div>
           </div>
-          <div style="grid-column:9 / span 4;display:flex;flex-direction:column;gap:clamp(22px,3vh,34px)">
+          <div class="mdv-brioche-text" style="grid-column:9 / span 4;display:flex;flex-direction:column;gap:clamp(22px,3vh,34px)">
             <img data-reveal="up" src="./brioche.png" alt="La Petite Brioche" style="display:block;width:100%;max-width:170px;height:auto">
             <h3 data-reveal="up" data-delay="100" style="margin:0;font-weight:200;font-size:clamp(30px,3.4vw,58px);line-height:1.02;letter-spacing:-0.01em;color:#2C1917">La Petite<br>Brioche</h3>
             <p data-reveal="up" data-delay="180" style="margin:0;font-size:15px;line-height:2.05;color:#4A3B36;max-width:40ch;text-wrap:pretty">Rediseño de identidad para una panadería artesanal: mantener el muffin reconocible del logo original, simplificar el símbolo y pasar a una tipografía más limpia y legible. Misma marca, lectura actual.</p>
