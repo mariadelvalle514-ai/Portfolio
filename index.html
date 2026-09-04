@@ -227,8 +227,7 @@
     }
 
     /* --- 9. Scroll por pantallas --- */
-    html { scroll-snap-type: y proximity; }
-    section { scroll-snap-align: start; }
+    /* scroll-snap quitado: causaba conflictos con las animaciones en iOS Safari */
 
     /* --- 10. Email de contacto: una sola línea, más chico --- */
     a[style*="font-size: 28px"] {
@@ -292,6 +291,44 @@
     [style*="align-items:end;gap:24px;font-size:12px"] a,
     [style*="align-items: end; gap: 24px; font-size: 12px"] a {
       font-size: 10px !important;
+    }
+
+    /* --- 13. Bio más compacta (el texto justificado se veía largo) --- */
+    div[style*="font-size:clamp(14px,1.05vw,17px)"],
+    div[style*="font-size: clamp(14px,1.05vw,17px)"],
+    div[style*="font-size: clamp(14px, 1.05vw, 17px)"] {
+      font-size: 14px !important;
+      line-height: 1.55 !important;
+      gap: 14px !important;
+    }
+
+    /* --- 14. Mockups de Fierro y La Oficina a todo el ancho de la pantalla --- */
+    [style*="radial-gradient(120% 130% at 50% 40%"] {
+      width: 100vw !important;
+      margin-left: calc(-50vw + 50%) !important;
+      margin-right: calc(-50vw + 50%) !important;
+      gap: 4px !important;
+    }
+    [style*="radial-gradient(120% 130% at 50% 40%"] > img {
+      display: none !important;
+    }
+    [style*="radial-gradient(120% 130% at 50% 40%"] > div {
+      height: 90% !important;
+    }
+    [style*="justify-content:flex-end;gap:clamp(10px,1.2vw,22px)"],
+    [style*="justify-content: flex-end; gap: clamp(10px,1.2vw,22px)"],
+    [style*="justify-content: flex-end; gap: clamp(10px, 1.2vw, 22px)"] {
+      width: 100vw !important;
+      margin-left: calc(-50vw + 50%) !important;
+      margin-right: calc(-50vw + 50%) !important;
+    }
+
+    /* --- 15. Post de Doña Petrona: mismo ancho que el resto del contenido --- */
+    [style*="position:relative;height:min(74vh,660px);aspect-ratio:9 / 19.5"],
+    [style*="position: relative; height: min(74vh,660px); aspect-ratio: 9 / 19.5"],
+    [style*="position: relative; height: min(74vh, 660px); aspect-ratio: 9 / 19.5"] {
+      max-width: 100% !important;
+      margin: 0 0 22px 0 !important;
     }
 
   }
