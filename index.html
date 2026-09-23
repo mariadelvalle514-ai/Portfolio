@@ -45,6 +45,23 @@
     section > div[style*="padding:clamp(60px"], #fierrox [style*="padding:clamp(60px"] { padding: 56px 22px !important; }
     #contacto a { font-size: 22px !important; }
   }
+  .mbr { display: none; }
+  @media (max-width: 900px) {
+    .mbr { display: inline; }
+    .frase { padding: 56px 18px !important; }
+    .frase p { font-size: 4.9vw !important; max-width: none !important; white-space: nowrap; line-height: 1.45 !important; }
+    .pk-grid { min-height: 0 !important; display: flex !important; flex-direction: column !important; }
+    .pk-txt { order: 1; padding: 64px 22px 32px !important; gap: 22px !important; justify-content: flex-start !important; }
+    .pk-img { order: 2; min-height: 0 !important; height: 118vw; position: relative; overflow: hidden; }
+    .pk-img img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; transform: none !important; }
+    .br-txt { position: static !important; }
+    .br-txt2 { order: 1; }
+    .br-photo { order: 2; }
+    .br-logo { order: 9; max-width: 150px !important; }
+    #petrona .pet-phone { width: min(56vw, 230px) !important; }
+    #petrona .pet-phone img { object-fit: contain !important; background: #0B0A08; }
+    .ret img { transition: transform 1600ms cubic-bezier(.22,.7,.2,1); }
+  }
 </style>
 <script>
 (function(){var ex=['.png','.PNG','.jpg','.JPG','.jpeg','.JPEG','.webp'];
@@ -74,7 +91,7 @@ var n=img.__q.shift();if(n)img.src=n.split('/').map(encodeURIComponent).join('/'
   </section>
 
   <section id="sobre" style="display:grid;grid-template-columns:0.42fr 0.58fr;align-items:stretch;min-height:100vh;background:#E6E2DE">
-    <div data-reveal="right" style="position:relative;overflow:hidden;background:#C2BCA9">
+    <div class="ret" data-reveal="right" style="position:relative;overflow:hidden;background:#C2BCA9">
       <img src="retrato MVP.PNG" data-alt="assets/retrato.jpg" alt="María del Valle Pescetti" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%;filter:grayscale(1)">
     </div>
     <div style="display:flex;flex-direction:column;justify-content:center;gap:clamp(34px,5vh,60px);padding:clamp(60px,9vh,120px) clamp(40px,6vw,110px)">
@@ -100,7 +117,7 @@ var n=img.__q.shift();if(n)img.src=n.split('/').map(encodeURIComponent).join('/'
     </div>
   </section>
 
-  <section style="background:#2C1917;color:#F0EBE4;display:flex;align-items:center;justify-content:center;padding:min(20vh,190px) 40px">
+  <section class="frase" style="background:#2C1917;color:#F0EBE4;display:flex;align-items:center;justify-content:center;padding:min(20vh,190px) 40px">
     <p data-reveal="fade" style="margin: 0; font-weight: 200; font-size: clamp(28px,4.6vw,74px); line-height: 1.28; letter-spacing: -0.005em; text-align: center; max-width: 26ch; text-wrap: balance; font-family: Raleway">Cada marca tiene un <em style="font-style:italic">estilo</em>.<br>Mi trabajo es hacerlo <em style="font-style:italic">visible</em>.</p>
   </section>
 
@@ -297,23 +314,23 @@ var n=img.__q.shift();if(n)img.src=n.split('/').map(encodeURIComponent).join('/'
   </section>
 
   <section id="juanita" style="background:#1A1814;color:#F0EBE4">
-    <div style="display:grid;grid-template-columns:0.5fr 0.5fr;align-items:stretch;min-height:96vh">
-      <div style="display:flex;flex-direction:column;justify-content:center;gap:30px;padding:clamp(60px,10vh,130px) clamp(40px,5vw,90px)">
+    <div class="pk-grid" style="display:grid;grid-template-columns:0.5fr 0.5fr;align-items:stretch;min-height:96vh">
+      <div class="pk-txt" style="display:flex;flex-direction:column;justify-content:center;gap:30px;padding:clamp(60px,10vh,130px) clamp(40px,5vw,90px)">
         <h3 data-reveal="up" style="margin: 0; font-weight: 200; font-size: clamp(30px,3.6vw,60px); line-height: 1.08; font-family: Raleway">Juanita<br>Licor de Allá y de Acá</h3>
         <p data-reveal="up" data-delay="120" style="margin: 0; font-size: 15px; line-height: 2.05; color: rgba(240,235,228,0.7); max-width: 44ch; text-wrap: pretty; font-family: Raleway">Rediseño de etiqueta para una bebida artesanal creada por Carito y Germán junto a Destilateca: yerba mate y naranja valenciana, la unión entre Argentina y Valencia. Llevando la identidad a un lenguaje moderno, minimalista y fresco, con el degradado&nbsp; nacido de la mezcla de sus ingredientes&nbsp; como recurso visual principal del sistema.</p>
         <div data-reveal="fade" data-delay="200" style="height:6px;max-width:340px;background:linear-gradient(90deg,#4A5A34,#8C9A4E 40%,#D9A83C 76%,#E8B45E)"></div>
         <span data-reveal="fade" data-delay="260" style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(240,235,228,0.5)">Marca · Etiqueta · Producto</span>
       </div>
-      <div data-reveal="fade" style="position:relative;overflow:hidden;min-height:60vh">
+      <div class="pk-img" data-reveal="fade" style="position:relative;overflow:hidden;min-height:60vh">
         <img data-parallax="0.04" src="ETIQUETA JUANITA .png" data-alt="ETIQUETA JUANITA.png|assets/juanita-bottle.jpg" alt="Botella Juanita" style="position:absolute;inset:-5% 0;width:100%;height:110%;object-fit:cover">
       </div>
     </div>
   </section>
 
   <section id="fierrox" style="background:#0F0E0C;color:#F0EBE4">
-    <div style="display:grid;grid-template-columns:0.52fr 0.48fr;align-items:stretch;min-height:96vh">
-      <div data-reveal="fade" style="position:relative;min-height:60vh"><img src="Etiqueta de Vino X.png" data-alt="assets/fierrox.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover"></div>
-      <div style="display:flex;flex-direction:column;justify-content:center;gap:30px;padding:clamp(60px,10vh,130px) clamp(40px,5vw,90px)">
+    <div class="pk-grid" style="display:grid;grid-template-columns:0.52fr 0.48fr;align-items:stretch;min-height:96vh">
+      <div class="pk-img" data-reveal="fade" style="position:relative;min-height:60vh"><img src="Etiqueta de Vino X.png" data-alt="assets/fierrox.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover"></div>
+      <div class="pk-txt" style="display:flex;flex-direction:column;justify-content:center;gap:30px;padding:clamp(60px,10vh,130px) clamp(40px,5vw,90px)">
         <h3 data-reveal="up" style="margin: 0; font-weight: 200; font-size: clamp(30px,3.6vw,60px); line-height: 1.08; font-family: Raleway">Fierro X<br>Vino aniversario</h3>
         
         <p data-reveal="up" data-delay="120" style="margin: 0; font-size: 15px; line-height: 2.05; color: rgba(240,235,228,0.7); max-width: 44ch; text-wrap: pretty; font-family: Raleway">Edición de etiqueta de vino por los diez años del restaurante. Se descarta el “10” convencional y se utiliza la cruz como marca del aniversario. Se ordena toda la etiqueta creando una sola imagen, tipografía pequeña, mucho negro y un plateado que da carácter de edición especial, para que el gesto se lea desde la mesa.</p><span data-reveal="fade" data-delay="200" style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(240,235,228,0.5)">Concepto · Etiqueta · Arte final</span>
@@ -324,8 +341,8 @@ var n=img.__q.shift();if(n)img.src=n.split('/').map(encodeURIComponent).join('/'
 
   
 
-  <section style="background:#2C1917;color:#F0EBE4;display:flex;align-items:center;justify-content:center;padding:min(20vh,190px) 40px">
-    <p data-reveal="fade" style="margin: 0; font-weight: 200; font-size: clamp(28px,4.6vw,74px); line-height: 1.28; letter-spacing: -0.005em; text-align: center; max-width: 26ch; text-wrap: balance; font-family: Raleway">Creando marcas, dándole <em style="font-style:italic">voz</em>, <em style="font-style:italic">forma</em> y <em style="font-style:italic">personalidad propia</em>.</p>
+  <section class="frase" style="background:#2C1917;color:#F0EBE4;display:flex;align-items:center;justify-content:center;padding:min(20vh,190px) 40px">
+    <p data-reveal="fade" style="margin: 0; font-weight: 200; font-size: clamp(28px,4.6vw,74px); line-height: 1.28; letter-spacing: -0.005em; text-align: center; max-width: 26ch; text-wrap: balance; font-family: Raleway">Creando marcas, dándole<br class="mbr"> <em style="font-style:italic">voz</em>, <em style="font-style:italic">forma</em> y <em style="font-style:italic">personalidad propia</em>.</p>
   </section>
 
   <section style="background:#E6E2DE;padding:min(15vh,140px) 40px min(6vh,50px);text-align:center">
@@ -339,7 +356,7 @@ var n=img.__q.shift();if(n)img.src=n.split('/').map(encodeURIComponent).join('/'
           <span>Take away de pasta · Valencia</span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(18px,2.2vw,32px);align-items:start">
-          <div style="grid-column:1 / span 4;display:flex;flex-direction:column;gap:clamp(22px,3vh,34px);position:sticky;top:clamp(40px,8vh,90px)">
+          <div class="br-txt" style="grid-column:1 / span 4;display:flex;flex-direction:column;gap:clamp(22px,3vh,34px);position:sticky;top:clamp(40px,8vh,90px)">
             <h3 data-reveal="up" style="margin:0;font-weight:200;font-size:clamp(30px,3.4vw,58px);line-height:1.02;letter-spacing:-0.01em;color:#2C1917">Piero<br>Ronconi</h3>
             <p data-reveal="up" data-delay="120" style="margin:0;font-size:15px;line-height:2.05;color:#4A3B36;max-width:40ch;text-wrap:pretty">Take away de pasta italiana en Valencia. El logotipo busca Italia sin folclore: sobriedad, elegancia y un trazo contemporáneo que funciona igual en una carta, en una caja o en un sello.</p>
             <span data-reveal="fade" data-delay="200" style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7A70">Logotipo · Aplicaciones · Papelería</span>
@@ -366,11 +383,11 @@ var n=img.__q.shift();if(n)img.src=n.split('/').map(encodeURIComponent).join('/'
           <span>Panadería artesanal</span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(18px,2.2vw,32px);align-items:center">
-          <div data-reveal="up" style="grid-column:1 / span 7;overflow:hidden;background:#DAD5CF">
+          <div class="br-photo" data-reveal="up" style="grid-column:1 / span 7;overflow:hidden;background:#DAD5CF">
             <div style="aspect-ratio:16 / 11;transition:transform 1100ms cubic-bezier(.2,.7,.2,1)"><img src="MOCKUP LOGO PETITE BRIOCHE.png" data-alt="assets/brioche-1.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover"></div>
           </div>
-          <div style="grid-column:9 / span 4;display:flex;flex-direction:column;gap:clamp(22px,3vh,34px)">
-            <img data-reveal="up" src="brioche.png" data-alt="logos/brioche.png" alt="La Petite Brioche" style="display:block;width:100%;max-width:170px;height:auto">
+          <div class="br-txt br-txt2" style="grid-column:9 / span 4;display:flex;flex-direction:column;gap:clamp(22px,3vh,34px)">
+            <img class="br-logo" data-reveal="up" src="brioche.png" data-alt="logos/brioche.png" alt="La Petite Brioche" style="display:block;width:100%;max-width:170px;height:auto">
             <h3 data-reveal="up" data-delay="100" style="margin:0;font-weight:200;font-size:clamp(30px,3.4vw,58px);line-height:1.02;letter-spacing:-0.01em;color:#2C1917">La Petite<br>Brioche</h3>
             <p data-reveal="up" data-delay="180" style="margin:0;font-size:15px;line-height:2.05;color:#4A3B36;max-width:40ch;text-wrap:pretty">Rediseño de identidad para una panadería artesanal: mantener el muffin reconocible del logo original, simplificar el símbolo y pasar a una tipografía más limpia y legible. Misma marca, lectura actual.</p>
             <span data-reveal="fade" data-delay="240" style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7A70">Rebranding · Aplicaciones · Papelería</span>
@@ -492,7 +509,9 @@ var n=img.__q.shift();if(n)img.src=n.split('/').map(encodeURIComponent).join('/'
     frame();
   }
 
-  function start(){ reveals(); scrollFx(); } if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+  function retrato(){ if (!window.matchMedia('(max-width: 900px)').matches) return; var el=document.querySelector('.ret'); if(!el) return; el.removeAttribute('data-reveal'); var im=el.querySelector('img'); el.style.transition='clip-path 1500ms cubic-bezier(.22,.7,.2,1), opacity 900ms'; el.style.clipPath='inset(100% 0 0 0)'; el.style.opacity='0.2'; if(im) im.style.transform='scale(1.18)';
+    var o=new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting) return; o.disconnect(); var go=function(){ el.style.clipPath='inset(0 0 0 0)'; el.style.opacity='1'; if(im) im.style.transform='scale(1)'; }; if(im && !(im.complete && im.naturalWidth)){ var d=false,f=function(){ if(!d){d=true;go();} }; im.addEventListener('load',f); setTimeout(f,3000);} else go(); }); },{threshold:0.15}); o.observe(el); }
+  function start(){ retrato(); reveals(); scrollFx(); } if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
 
 </script>
